@@ -1,0 +1,48 @@
+﻿@model Demo3_1.Models.Middag
+
+@{
+    ViewData["Title"] = "Recept";
+}
+
+<h2>Recept</h2>
+
+<div>
+    <p>Det blir pannkaka för  @Html.DisplayNameFor(model => model.AntalPotioner) potioner </p>
+    <hr />
+    <dl class="dl-horizontal">
+
+  
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetemjol)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vetemjol)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Agg)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agg)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Salt)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Salt)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mjolk)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mjolk)
+        </dd>
+
+    </dl>
+</div>
+<div>
+<p>Laga maten, ät och sätt ett betyg efteråt</p>
+    <a asp-action="Betyg">Gå vidare och sätt betyg</a>
+</div>
+<div>
+    <a asp-action="Index">Börja om</a>
+</div>

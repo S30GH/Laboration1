@@ -1,0 +1,64 @@
+﻿@model Demo3_1.Models.ViewModeln
+@{
+    ViewData["Title"] = "Index7";
+}
+
+<h2>Index7</h2>
+
+<p><b>Personer - Lista från ViewData</b></p>
+
+@{
+    //Få över ViewData till en lista. Deklarerar IEnumerable <typen av lista> får heta personer. ViewData fattar inte att det är en lista (castar konverterar tillsamma)
+    IEnumerable<Demo3_1.Models.Person> personer = (IEnumerable<Demo3_1.Models.Person>)ViewData["personer_i_lista"];
+}
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Namn</th>
+    </tr>
+
+    @foreach (Person person in personer)
+    {
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.Namn</td>
+        </tr>
+    }
+</table>
+
+<p><b>Personer - Lista från ViewBag</b></p>
+
+@{ 
+    IEnumerable<Demo3_1.Models.Person> personer2 = (IEnumerable<Demo3_1.Models.Person>)ViewBag.personer;
+}
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Namn</th>
+    </tr>
+    @foreach (Person person in personer2)
+    {
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.Namn</td>
+        </tr>
+    }
+</table>
+
+<p><b>Personer - Lista från model</b></p>
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Namn</th>
+    </tr>
+    @foreach (Demo3_1.Models.Person person in Model.PersonDetaljLista)
+    {
+        <tr>
+            <td>@person.Id</td>
+            <td>@person.Namn</td>
+        </tr>
+    }
+</table>

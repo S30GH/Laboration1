@@ -1,0 +1,22 @@
+﻿@model Demo3_1.Models.Middag
+
+@{
+    ViewData["Title"] = "Alternativ";
+}
+
+<h2>Alternativ</h2>
+
+<div>
+    <h4>Middag</h4>
+    <hr />
+
+    <p>
+        @Html.DisplayFor(model => model.Namn) har lagat middag den @Html.DisplayFor(model => model.Datum).
+        Det blev @Html.DisplayFor(model => model.AntalPotioner) potioner pannkaka och det smakade @Html.DisplayFor(model => model.Betyg)
+    </p>
+
+   
+</div>
+<div>
+    <a asp-action="Index">Börja om</a>
+</div>

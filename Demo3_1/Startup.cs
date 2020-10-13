@@ -38,7 +38,7 @@ namespace Demo3_1
             services.AddSession(options =>
             {
                 // Set a short timeout for easy testing.
-                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.IdleTimeout = TimeSpan.FromSeconds(30);
                 options.Cookie.HttpOnly = true;
             });
 
@@ -67,7 +67,7 @@ namespace Demo3_1
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Workoutplanner}/{action=Index}/{id?}");
             });
         }
     }

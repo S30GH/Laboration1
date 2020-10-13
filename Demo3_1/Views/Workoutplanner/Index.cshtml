@@ -1,0 +1,39 @@
+﻿@model Laboration1.Models.Workoutplanner
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Time to plan your workout</h2>
+<h4>@ViewBag.text</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Workoutplan" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Distance" class="control-label"></label>
+                <input asp-for="Distance" class="form-control" />
+                <span asp-validation-for="Distance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tempo" class="control-label"></label>
+                <input asp-for="Tempo" class="form-control" />
+                <span asp-validation-for="Tempo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="reset" value="Start over" class="btn btn-danger" />
+                <input type="submit" value="Plan workout" class="btn btn-success" />
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+

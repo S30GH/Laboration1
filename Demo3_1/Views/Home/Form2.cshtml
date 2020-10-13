@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Form2";
+}
+
+<h2>Form2</h2>
+
+<form action="/Home/Form2" method="post">
+    <input id="textexempel" name="textexempel" type="text" value="" />  
+    <input type="submit" value="Skicka in" class="btn-primary" />
+</form>
+
+<p>Resultat: @ViewBag.s</p>

@@ -1,0 +1,23 @@
+﻿@model Laboration1.Models.Workoutplanner
+
+@{
+    ViewData["Title"] = "Conclusion";
+}
+
+
+
+<div class="row" align="center">
+    <h2>Conclusion</h2>
+    <h4>@ViewBag.text</h4>
+
+    <p>
+        Great job, @Html.DisplayFor(model => model.Name)! You planned a workout with a distance of @Html.DisplayFor(model => model.Distance) km at a pace of
+        @Html.DisplayFor(model => model.Tempo) min/km. The total workout time was estimated to @Html.DisplayFor(model => model.TotalTime) minutes, 
+        consisting of @Html.DisplayFor(model => model.Warmup) minutes warmup time and @Html.DisplayFor(model => model.Stretching) minutes of stretching.
+        The workout got the rating: @Html.DisplayFor(model => model.Rating).
+    </p>
+    <hr />
+    <div>
+        <a class="btn btn-danger" asp-action="Index">Start over</a>
+    </div>
+    </div>

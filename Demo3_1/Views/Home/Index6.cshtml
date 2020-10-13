@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Demo3_1.Models.Item>
+
+@{
+    ViewData["Title"] = "Index6";
+}
+
+<h2>Index6</h2>
+
+
+@foreach (var item in Model) {
+       <ul>
+    <li> @Html.DisplayNameFor(Model => Model.Id): @Html.DisplayFor(modelItem => item.Id)</li>
+    <li> @Html.DisplayNameFor(Model => Model.Name): @Html.DisplayFor(modelItem => item.Name)</li>
+       </ul>
+}
+  

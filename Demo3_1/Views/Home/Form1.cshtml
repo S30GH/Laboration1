@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Form1";
+}
+
+<h2>Form1</h2>
+
+@using (Html.BeginForm())
+    //Skickar tillbaka till samma formulär om den är tom
+{
+
+    @Html.TextBox("textexempel");
+    <input type="submit" value="Skicka in" class="btn-primary" />
+}
+
+<p>Resultat: @ViewBag.s</p>

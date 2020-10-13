@@ -1,0 +1,39 @@
+﻿@model Demo3_1.Models.Middag
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Det är dags att laga middag!</h2>
+<p>Fyll i namn, antal potioner och datum.</p>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Recept" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Namn" class="control-label"></label>
+                <input asp-for="Namn" class="form-control" />
+                <span asp-validation-for="Namn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AntalPotioner" class="control-label"></label>
+                <input asp-for="AntalPotioner" class="form-control" />
+                <span asp-validation-for="AntalPotioner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datum" class="control-label"></label>
+                <input asp-for="Datum" class="form-control" />
+                <span asp-validation-for="Datum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Hämta recept" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
